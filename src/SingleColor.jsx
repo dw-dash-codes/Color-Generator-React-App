@@ -3,7 +3,7 @@ import { MdOutlineContentCopy } from "react-icons/md";
 import { FaCheck } from "react-icons/fa6";
 import toast from "react-hot-toast";
 
-const SingleColor = ({ rgb, hex }) => {
+const SingleColor = ({ rgb, hex, index }) => {
   const [copy, setCopy] = useState(false);
 
   const handleCopy = () => {
@@ -41,7 +41,7 @@ const SingleColor = ({ rgb, hex }) => {
               />
             </>
           )}
-          <h5># {hex}</h5>
+          <h5 className={`${index >= 10 ? "text-white" : ""}`}># {hex}</h5>
         </div>
       </div>
     </>
